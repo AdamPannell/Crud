@@ -1,0 +1,51 @@
+#User_Creation
+{
+	border: none;
+	padding: 0px;
+	text-align: center;
+}
+
+#userInfo
+{
+	padding: 0px;
+	margin: 0px;
+	width: 333px;
+}
+
+#userList
+{
+	width: 333px;
+}
+
+#userTable
+{
+	margin-left: auto;
+	margin-right: auto;
+	width: 333px;
+}
+#userTable td, th
+{
+	text-align: center;
+}
+
+#addUser
+{
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	padding: 0px;
+	margin: 0px;
+}
+
+h2
+{
+	padding: 0px;
+	margin: 0px;
+	text-align: center;
+}
+
+p
+{
+	padding: 0px;
+	margin: 0px;
+}

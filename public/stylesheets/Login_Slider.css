@@ -1,0 +1,49 @@
+#login {
+	width: 290px;
+	position: absolute;
+	right: 5px;
+	top: 55px;
+	z-index: 100;
+}
+
+#openLoginForm{
+	margin: 0;
+	cursor: pointer;
+	background: white  url(http://students.cpcc.edu/~apannel1/web115/images/open.png) no-repeat 8px 7px;
+	color: black;
+	padding: 5px 0 2px 30px;
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+}
+
+#login .close {
+	background-image: url(http://students.cpcc.edu/~apannel1/web115/images/close.png);
+	background-color: #0099FF;	
+	color: white;
+}
+
+#openLoginForm:hover {
+	color: white;
+	background-color: blue;	
+}
+
+#login form {
+	padding: 5px 5px 5px 5px;
+	display: none;	
+	background-color: white;
+	border-bottom-left-radius: 5px;
+	border-bottom-right-radius: 5px;
+}
+#login label {
+	display: inline-block;
+	width: 100px;
+	text-align:right;
+	margin: 0 5px 0 0;
+	color: black;
+}
+#login input {
+	font-size: 14px;	
+}
+#login #loginButton {
+	margin-left: 50px;	
+}

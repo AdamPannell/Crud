@@ -1,0 +1,55 @@
+extends layout
+
+block inHeader
+	| <link rel="stylesheet" href="/stylesheets/user_page.css">
+
+block content
+	// USER INFO
+	div#userInfo
+		h2 User Info
+		p
+			strong Name:
+			|  <span id='userInfoName'></span>
+			br
+			strong Age:
+			|  <span id='userInfoAge'></span>
+			br
+			strong Password:
+			|  <span id='userInfoPassword'></span>
+			br
+			strong Location:
+			|  <span id='userInfoLocation'></span>
+	// /USER INFO
+
+	// USER LIST
+	
+	div#userList
+		h2 User List
+		table#userTable
+			thead
+				tr
+					th Username
+					th Email
+					th Delete?
+			tbody
+	// /USER LIST
+
+	// ADD USER
+	
+	div#addUser
+		h2 Add User
+		fieldset#User_Creation
+			input#inputUserName(type='text', placeholder='Username')
+			input#inputUserEmail(type='text', placeholder='Email')
+			br
+			input#inputUserFullname(type='text', placeholder='Full Name')
+			input#inputUserAge(type='text', placeholder='Age')
+			br
+			input#inputUserLocation(type='text', placeholder='Location')
+			input#inputUserPassword(type='text', placeholder='Password')
+			br
+			button#btnAddUser Add User
+	// /ADD USER
+
+
+

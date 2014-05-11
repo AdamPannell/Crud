@@ -1,0 +1,179 @@
+/*
+Adam Pannell
+1/21/2014
+Style for WEB-215
+*/
+
+body 
+{
+	background-color: #CCFFFF;
+	color: blue;
+	/*background: linear-gradient(#CCFFFF, white);*/ /*Need to look into more*/
+}
+
+h1
+{
+	color: blue;
+	font-size: 48px;
+	text-align: center;
+	font-family: Gadget, sans-serif;
+}
+
+h2
+{
+	font-family: Algerian, Gadget, sans-serif;
+	font-size: 28px;
+	color: #00CCFF;
+}
+
+h3
+{
+	font-family: Gadget, sans-serif;
+}
+
+h4
+{
+	font-family: Gadget, sans-serif;
+}
+
+h5
+{
+	font-family: Gadget, sans-serif;
+}
+
+h6
+{
+	font-family: Gadget, sans-serif;
+}
+
+hr
+{
+	color: blue;
+	background-color: blue;
+	border-color: blue;
+}
+
+p
+{
+	color: black;
+	font-size: 18px;
+	font-family: "Times New Roman", Times, serif;
+	/*text-indent: 40px;*/
+}
+
+a
+{
+	text-decoration: none;
+}
+
+a:hover
+{
+	text-decoration: underline;
+}
+
+#header
+{
+	position: relative;
+	top: -30px;
+	margin: 0px auto;
+	padding: 0px;
+	width: 1000px;
+}
+
+#link_bar
+{
+	position: absolute;
+	bottom: 3px;
+	right: 333px;
+	width: 333px;
+	
+	text-align: center;
+	
+	margin: 0px;
+	padding: 0px;
+	/*border: 1px black solid;*/
+}
+
+#timeDateField
+{
+	position: absolute;
+	bottom: 3px;
+	left: 0px;
+	width: 330px;
+	height: 18px;
+	
+	text-align: left;
+	
+	margin: 0px;
+	padding: 0px;
+	/*border: 1px black solid;*/
+}
+
+#timeDateText
+{
+	color: blue;
+	font-size: 12px;
+	font-family: Gadget, sans-serif;
+	margin-top: 3px;
+	margin-bottom: 3px;
+}
+
+#content
+{
+	padding: 0px;
+	margin: 0px auto;
+	width: 1000px;
+	position: relative;
+}
+
+#footer
+{
+	padding: 0px;
+	margin: 0px auto;
+	width: 1000px;
+}
+
+.pullquote 
+{
+	float: right;
+	clear: right;
+	width: 200px;
+	border: 1px solid blue;
+	padding: 10px;
+	font-size: 20px;
+	background-color: #00CCFF;
+	margin: 20px 0 10px 10px;
+	font-style: italic;
+	color: #0000A3;
+}
+
+#HTMLvalidator
+{
+	background-image: url(http://students.cpcc.edu/~apannel1/web215/images/validator.png);
+	background-position: 0 0;
+	display: inline-block;
+	width: 88px;
+	height: 31px; 
+}
+
+#CSSvalidator
+{
+	background-image: url(http://students.cpcc.edu/~apannel1/web215/images/validator.png);
+	background-position: 0 -51px;
+	display: inline-block;
+	width: 88px;
+	height: 31px; 
+}
+
+.vaildator
+{
+	text-align: center;
+}
+
+/*Deprecated CSS used by brand.html and contract.html*/
+.vaildatorImage
+{
+	height: 31px;
+	width: 88px;
+	border: 0px;
+}

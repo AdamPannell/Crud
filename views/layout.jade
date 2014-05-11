@@ -1,0 +1,44 @@
+doctype html
+html
+	head
+		title= title
+		link(rel='stylesheet', href='/stylesheets/style.css')
+		link(rel='stylesheet', href='/stylesheets/Login_Slider.css')
+		script(src='http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js')
+		script(src='/javascripts/global.js')
+		script(src='/javascripts/Login_Slider.js')
+		script(src='/javascripts/Time.js')
+		block inHeader
+	body
+		div#header
+			div#link_bar
+				a(href="http://www.cpcc.edu/stars/stars-calendar") STARS Calendar
+				|  | 
+				a(href="http://www.starscomputingcorps.org/") STARS Computing Corps
+				
+			div#timeDateField
+				p#timeDateText Todays Date/Time: <span id="getDate"></span> <span id="getTime"></span>
+				
+			//div#login
+				p#openLoginForm Login
+				form
+					p.
+						<label for="username">Username:</label>
+						<input type="text" name="username" id="username">
+					p.
+						<label for="password">Password:</label>
+						<input type="text" name="password" id="password">
+					p.
+						<input type="submit" name="button" id="loginButton" value="Submit" >
+			
+			h1= title
+			
+			hr
+		
+		div#content
+			block content
+		
+		div#footer
+			p.vaildator
+				<a id="HTMLvalidator" href="http://validator.w3.org/check?uri=referer"></a>
+				<a id="CSSvalidator" href="http://jigsaw.w3.org/css-validator/check/referer"></a>
