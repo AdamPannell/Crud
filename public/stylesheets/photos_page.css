@@ -1,0 +1,27 @@
+#dog1
+{
+	position: absolute;
+	left: 0px;
+}
+#dog2
+{
+	position: absolute;
+	right: 0px;
+}
+#dog3
+{
+	position: absolute;
+	left: 0px;
+	top: 505px;
+}
+#dog4
+{
+	position: absolute;
+	right: 0px;
+	top: 505px;
+}
+#footer
+{
+	position: absolute;
+	top: 980px;
+}

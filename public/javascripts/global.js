@@ -128,40 +128,67 @@ function addUser(event) {
 function deleteUser(event) {
 
     event.preventDefault();
+	
+	if(getCookie("username") !== "" && getCookie("fullname") !== "")
+	{
+		
+		// Pop up a confirmation dialog
+		var confirmation = confirm('Are you sure you want to delete this user?');
 
-    // Pop up a confirmation dialog
-    var confirmation = confirm('Are you sure you want to delete this user?');
+		// Check and make sure the user confirmed
+		if (confirmation === true) {
 
-    // Check and make sure the user confirmed
-    if (confirmation === true) {
+			// If they did, do our delete
+			$.ajax({
+				type: 'DELETE',
+				url: '/users/deleteuser/' + $(this).attr('rel')
+			}).done(function( response ) {
 
-        // If they did, do our delete
-        $.ajax({
-            type: 'DELETE',
-            url: '/users/deleteuser/' + $(this).attr('rel')
-        }).done(function( response ) {
+				// Check for a successful (blank) response
+				if (response.msg === '') {
+				}
+				else {
+					alert('Error: ' + response.msg);
+				}
+				
+				if(getCookie("rel") == $(this).attr('rel'))
+				{
+					//delete cookies
+					document.cookie = "username=; expires=Thu, 01 Jan 1970 00:00:00 GMT";
+					document.cookie = "fullname=; expires=Thu, 01 Jan 1970 00:00:00 GMT";
+					document.cookie = "rel=; expires=Thu, 01 Jan 1970 00:00:00 GMT";
+				}
+				
+				// Update the table
+				populateTable();
 
-            // Check for a successful (blank) response
-            if (response.msg === '') {
-            }
-            else {
-                alert('Error: ' + response.msg);
-            }
+			});
 
-            // Update the table
-            populateTable();
+		}
+		else {
 
-        });
+			// If they said no to the confirm, do nothing
+			return false;
 
-    }
-    else {
+		}//End confirm
+	}
+	else
+	{
+		alert("You must be a registered user to delete users");
+	}//End users only
+};//End deleteUser
 
-        // If they said no to the confirm, do nothing
-        return false;
-
-    }
-
-};
+function getCookie(cookieName)
+{
+	var name = cookieName + "=";
+	var ca = document.cookie.split(';');
+	for(var i=0; i<ca.length; i++) 
+	{
+		var c = ca[i].trim();
+		if (c.indexOf(name)==0) return c.substring(name.length,c.length);
+	}
+	return "";
+}//End getCookie
 
 
 

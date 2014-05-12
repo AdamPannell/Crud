@@ -28,5 +28,31 @@ router.delete('/deleteuser/:id', function(req, res) {
     });
 });
 
+router.post("/userLogin", function(req, res)
+{
+	var db = req.db;
+	var userLoginData = req.body;
+	db.collection("userlist").findOne({username: userLoginData.username},function(err, item)
+	{
+		if(item.username === userLoginData.username)
+		{
+			if(item.password === userLoginData.Password)
+			{
+				console.log(item.username + " logged in");
+				res.json({status: 200, fullname: item.fullname, username: item.username, rel: item._id});
+			}
+			else
+			{
+				console.log(item.username + " login in failed");
+				res.json({status: 401});
+			}
+		}
+		else
+		{
+			console.log(userLoginData.username + " login in failed");
+			res.json({status: 404});
+		}
+	});
+});
 
 module.exports = router;
